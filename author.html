@@ -16,19 +16,20 @@
 <p id="results">right/wrong</p>
 <br>
 <script> 
-function checkAuthor(){
     let good = 0;
     let oops = 0;
+function checkAuthor(){
+    
     hidden_Author = document.getElementById("hiddenauthor").value;
     guess_Author = document.getElementById("guessauthor").value;
     result = document.getElementById("results");
     if (guess_Author === hidden_Author) {
-        alert("You got it right!");
         good++;
+        alert("You got it right!");
         result.innerHTML= `Correct Guesses: ${good}`;
     }else{
-        alert("Sorry");
         oops++;
+        alert("Sorry");
         result.innerHTML= `Wrong Guesses: ${oops}`;
     }
 }
