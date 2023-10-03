@@ -29,10 +29,18 @@ function checkAuthor(){
         result.innerHTML= `Correct Guesses: ${good}`;
     }else{
         oops++;
+        if(oops > 7){
+            document.getElementById("display").onclick=incorrectguesses();
+        }
         alert("Sorry");
-        result.innerHTML= `Wrong Guesses: ${oops}`;
     }
-}
+    result.innerHTML = "Correct Guesses: " + good + "<br>Wrong Guesses: " + oops;
+    }
+
+    function incorrectguesses()
+    {
+        alert("Sorry, ran out of guesses.");
+        }
 </script>
 
 <div class="image">
@@ -54,11 +62,10 @@ function checkAuthor(){
                 break;
             case 3:
                 img.src = 'Kurnool.jpeg';
-                useImage = 1;
+                useImage = 1;   
                 break;
         }
     }
 </script>
-
 </body>
 </html> 
