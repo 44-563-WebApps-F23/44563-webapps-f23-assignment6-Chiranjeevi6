@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>Author</title>
+
+<head>
+    <title>Author</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
 <body>
 <h1>Author entry - Chiranjeevi Ankaiah</h1>
 <h2>Getting input</h2>
@@ -10,7 +19,7 @@
     <input type="password" id="hiddenauthor" name="hiddenauthor" value="Dickens" required>
     <label for="guessauthor">Guess the author</label>
     <input type="text" id="guessauthor" name="guessauthor" required>
-    <input type="button" value="Check the guess" onclick="checkAuthor()">
+    <input type="button" class="btn btn-outline-warning" value="Check the guess" onclick="checkAuthor()">
 </form>
 <br>
 <p id="results">right/wrong</p>
@@ -45,7 +54,7 @@ function checkAuthor(){
 
 <div class="image">
     <img src="Kurnool.jpeg" alt="Kurnool" width="100px" height="100px" id="image" onclick="selectImage()"><br>
-    <input type="button" value="Change Image" onclick="selectImage()">
+    <button type="button" class="btn btn-outline-success" onclick="selectImage()">Change Image</button>
 </div>
 <script>
     var useImage = 1;
